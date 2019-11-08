@@ -5,7 +5,6 @@ public class Shift {
 	//variables for the Shift class
 	private String name;
 	
-	private int shiftNum = Integer.parseInt(this.getName());
 	private int hours;
 	
 	//constructors for the Shift class
@@ -22,12 +21,6 @@ public class Shift {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public int getShiftNum() {
-		return shiftNum;
-	}
-	public void setShiftNum(int shiftNum) {
-		this.shiftNum = shiftNum;
 	}
 	public int getHours() {
 		return hours;
