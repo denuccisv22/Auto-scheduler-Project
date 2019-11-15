@@ -6,7 +6,7 @@ public class Day {
 	private String name;
 	
 	private int totalNumberOfShifts = 10;
-	private int[] requiredShifts = new int[10];
+	private String[] requiredShifts = new String[100];
 	
 	//constructors for the Day class
 	public Day(String name) {
@@ -18,10 +18,10 @@ public class Day {
 		
 		this.setName(name);
 		this.setTotalNumberOfShifts(totalNumberOfShifts);
-		this.setRequiredShifts(new int[totalNumberOfShifts]);
+		this.setRequiredShifts(new String[totalNumberOfShifts]);
 		
 	}
-	public Day(String name, int totalNumberOfShifts, int[] requiredShifts) {
+	public Day(String name, int totalNumberOfShifts, String[] requiredShifts) {
 		
 		this.setName(name);
 		this.setTotalNumberOfShifts(totalNumberOfShifts);
@@ -41,10 +41,10 @@ public class Day {
 	public void setTotalNumberOfShifts(int totalNumberOfShifts) {
 		this.totalNumberOfShifts = totalNumberOfShifts;
 	}
-	public int[] getRequiredShifts() {
+	public String[] getRequiredShifts() {
 		return requiredShifts;
 	}
-	public void setRequiredShifts(int[] requiredShifts) {
+	public void setRequiredShifts(String[] requiredShifts) {
 		this.requiredShifts = requiredShifts;
 	}
 	

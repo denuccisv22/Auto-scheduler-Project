@@ -28,5 +28,8 @@ public class Shift {
 	public void setHours(int hours) {
 		this.hours = hours;
 	}
+	public void printShift() {
+		System.out.println("Shift Name: " + this.name + " | Hours: " + this.hours);
+	}
 	
 }
