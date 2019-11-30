@@ -1,0 +1,7 @@
+Name: s Total Shifts: 4 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge
+Name: S Total Shifts: 4 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge
+Name: M Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge
+Name: T Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge
+Name: W Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge
+Name: R Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge
+Name: F Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge

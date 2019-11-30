@@ -6,14 +6,15 @@ public class Employee {
 	private Shift primaryShift;
 	private Shift[] possibleShifts = new Shift[10];
 	
+	private int employeeNum = 0;
 	private int maxHours;
 	private int hoursWorked = 0;
 	
-	private int[] datesRequestedOff = new int[7];
+	private int[] datesRequestedOff = new int[31];
 	
 	private String name = "N/A";
 	
-	private String[] workDays = new String[7];
+	private Day[] workDays = new Day[7];
 	
 	private boolean worksWeekends = true;	
 	
@@ -39,7 +40,7 @@ public class Employee {
 		this.setPossibleShifts(possibleShifts);
 		
 	}
-	public Employee(String name, Shift primaryShift, int maxHours, String[]workDays) {
+	public Employee(String name, Shift primaryShift, int maxHours, Day[]workDays) {
 		
 		this.setName(name);
 		this.setPrimaryShift(primaryShift);
@@ -56,7 +57,7 @@ public class Employee {
 		this.setWorksWeekends(worksWeekends);
 		
 	}
-	public Employee(String name, Shift primaryShift, int maxHours, String[]workDays, boolean worksWeekends) {
+	public Employee(String name, Shift primaryShift, int maxHours, Day[]workDays, boolean worksWeekends) {
 		
 		this.setName(name);
 		this.setPrimaryShift(primaryShift);
@@ -66,7 +67,7 @@ public class Employee {
 		
 	}
 
-	public Employee(String name, Shift primaryShift, int maxHours, String[]workDays, boolean worksWeekends, Shift[] possibleShifts) {
+	public Employee(String name, Shift primaryShift, int maxHours, Day[]workDays, boolean worksWeekends, Shift[] possibleShifts) {
 		
 		this.setName(name);
 		this.setPrimaryShift(primaryShift);
@@ -75,6 +76,19 @@ public class Employee {
 		this.setWorksWeekends(worksWeekends);
 		this.setPossibleShifts(possibleShifts);
 		
+	}
+	
+	public Employee(String name, int eNum, int maxHours, int hoursWorked, Shift primaryShift, Shift[] possibleShifts, Day[] workDays, boolean worksWeekends, int[] datesRequestedOff) {
+		
+		this.setName(name);
+		this.setEmployeeNum(eNum);
+		this.setMaxHours(maxHours);
+		this.setHoursWorked(hoursWorked);
+		this.setPrimaryShift(primaryShift);
+		this.setPossibleShifts(possibleShifts);
+		this.setWorkDays(workDays);
+		this.setWorksWeekends(worksWeekends);
+		this.setDatesRequestedOff(datesRequestedOff);
 	}
 	
 	//getters and setters for the Employee class
@@ -115,16 +129,85 @@ public class Employee {
 	public  void setName(String name) {
 		this.name = name;
 	}
-	public  String[] getWorkDays() {
+	public  Day[] getWorkDays() {
 		return workDays;
 	}
-	public  void setWorkDays(String[] workDays) {
+	public  void setWorkDays(Day[] workDays) {
 		this.workDays = workDays;
 	}
-	public  boolean isWorksWeekends() {
+	public  boolean getWorksWeekends() {
 		return worksWeekends;
 	}
 	public void setWorksWeekends(boolean worksWeekends) {
 		this.worksWeekends = worksWeekends;
+	}
+	public int getEmployeeNum() {
+		return employeeNum;
+	}
+	public void setEmployeeNum(int employeeNum) {
+		this.employeeNum = employeeNum;
+	}
+	public String showPossibleShifts() {
+		String s = "";
+		int fullCounter = 0;
+		for(int i = 0; i < this.possibleShifts.length; i++) {
+			if(this.possibleShifts[i] != null) {
+				fullCounter++;
+			}
+			else {
+				break;
+			}
+		}
+		for(int i = 0; i < fullCounter; i++) {
+			if(i + 1 != fullCounter) {
+				s += this.possibleShifts[i].getName() + ", ";
+			}
+			else {
+				s += this.possibleShifts[i].getName();
+			}
+		}
+		return s;
+	}
+	public String showDatesRequestedOff() {
+		String s = "";
+		int fullCounter = 0;
+		for(int i = 0; i < this.datesRequestedOff.length; i++) {
+			if(this.datesRequestedOff[i] != 0) {
+				fullCounter++;
+			}
+			else {
+				break;
+			}
+		}
+		for(int i = 0; i < fullCounter; i++) {
+			if(i + 1 != fullCounter) {
+				s += this.datesRequestedOff[i] + ", ";
+			}
+			else {
+				s += this.datesRequestedOff[i];
+			}
+		}
+		return s;
+	}
+	public String showWorkDays() {
+		String s = "";
+		int fullCounter = 0;
+		for(int i = 0; i < this.workDays.length; i++) {
+			if(this.workDays[i] != null) {
+				fullCounter++;
+			}
+			else {
+				break;
+			}
+		}
+		for(int i = 0; i < fullCounter; i++) {
+			if(i + 1 != fullCounter) {
+				s += this.workDays[i].getName() + ", ";
+			}
+			else {
+				s += this.workDays[i].getName();
+			}
+		}
+		return s;
 	}
 }

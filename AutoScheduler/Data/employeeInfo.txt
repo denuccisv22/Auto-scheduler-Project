@@ -1,0 +1,2 @@
+Name: Sam Employee Number: 2578 Max Hours: 14 Hours Worked: 0 Primary Shift: 12 Charge Possible Shifts: 7 Cafe, 11 F.P.A. Can Work: s, S, M, F Works Weekends: true Dates Requested Off: 
+Name: Lynn Employee Number: 2580 Max Hours: 40 Hours Worked: 0 Primary Shift: 12 Charge Possible Shifts: 7 Cafe, 11 F.P.A. Can Work: s, S, M, F Works Weekends: true Dates Requested Off: 
