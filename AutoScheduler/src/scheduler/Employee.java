@@ -210,4 +210,9 @@ public class Employee {
 		}
 		return s;
 	}
+	public void printEmployeeInfo() {
+		System.out.println("Name: " + this.name + " | Emp Num: " + this.employeeNum + " | Max Hours: " + this.maxHours + " | Hours Worked: " + this.hoursWorked + " | Primary Shift: " + 
+						  this.primaryShift.getName() + " | Possible Shifts: " + showPossibleShifts() + " | Works: " + showWorkDays() + " | Works Weekends: " + this.worksWeekends + 
+						  " | Dates Requested Off: " + showDatesRequestedOff());
+	}
 }

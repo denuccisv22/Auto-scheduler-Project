@@ -14,6 +14,7 @@ public class Main {
 	private static Employee[] employees = new Employee[100];
 	private static int shiftCounter = 0;
 	private static int dayCounter = 0;
+	private static int employeeCounter = 0;
 	
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
@@ -24,23 +25,25 @@ public class Main {
 		//load info into arrays
 		loadShifts();
 		loadDays();
+		loadEmployees();
 		
 		//create employee and test employee save
-		Shift[] possibleShift = {shifts[2], shifts[8]};
+		/*Shift[] possibleShift = {shifts[2], shifts[8]};
 		Day[] workDays = {days[0], days[1], days[2], days[6]};
-		int[] daysOff = {};
+		int[] daysOff = {1, 2, 3, 4, 5};*/
 		
-		Employee sam = new Employee("Sam", 2578, 14, 0, shifts[9], possibleShift, workDays, true, daysOff);
-		Employee lynn = new Employee("Lynn", 2580, 40, 0, shifts[9], possibleShift, workDays, true, daysOff);
-		employees[0] = sam;
-		employees[1] = lynn;
+		//Employee sam = new Employee("Sam", 2578, 14, 0, shifts[9], possibleShift, workDays, true, daysOff);
+		//Employee lynn = new Employee("Lynn", 2580, 40, 0, shifts[9], possibleShift, workDays, true, daysOff);
+		//employees[0] = sam;
+		//employees[1] = lynn;
+		
 		
 		//save info into text files
 		saveDays();
 		saveShifts();
 		saveEmployees();
 		//createShift();
-		for(int i = 0; i < shifts.length; i++) {
+		/*for(int i = 0; i < shifts.length; i++) {
 		
 			if(shifts[i] == null) {
 				break;
@@ -57,6 +60,15 @@ public class Main {
 			}
 			else {
 				days[i].printDay();
+			}
+		}*/
+		
+		for(int i = 0; i < employees.length; i++) {
+			if(employees[i] == null) {
+				break;
+			}
+			else {
+				employees[i].printEmployeeInfo();
 			}
 		}
 	}
@@ -277,7 +289,6 @@ public class Main {
 			
 			if(days[i] != null) {
 				
-				System.out.println(arrayToString(days[i].getRequiredShifts()));
 				String requiredShifts = arrayToString(days[i].getRequiredShifts());
 				//create string to be written to the file
 				String dayInfo = "Name: " + days[i].getName() + " " + "Total Shifts: " + days[i].getTotalNumberOfShifts() + " " + "Required Shifts: " + requiredShifts + "\n";
@@ -398,6 +409,196 @@ public class Main {
 		System.out.println("Employee(s) saved to employeeInfo.txt");
 		
 	}
+	
+	/*
+	 * load employee information from the employeeInfo.txt file into the employee array
+	 */
+	public static void loadEmployees() throws IOException {
+		
+		//create scanner for the shiftInfo text file
+		String fileSeperator = System.getProperty("file.separator");
+		File employeeInfo = new File("Data" + fileSeperator + "employeeInfo.txt");
+		Scanner sc = new Scanner(employeeInfo);
+		//sc.useDelimiter(", |\\n|\\s");
+		
+		//read the information
+		//check that the file isn't empty
+		while(sc.hasNext() == true) {
+			
+			//split the next line
+			String curDayInfo = sc.nextLine();
+			String[] line = curDayInfo.split(" ");
+			
+			String empName = "";
+			int empNum = 0;
+			int empMaxHours = 0;
+			int empHoursWorked = 0;
+			Shift empPrimeShift = null;
+			Shift[] empPossShifts = new Shift[10];
+			Day[] empPossDays = new Day[7];
+			boolean worksWeekends = false;
+			int[] datesRequestedOff = new int[31];
+			
+			for(int i = 0; i < line.length; i++) {
+				
+				if(line[i].equals("Name:")) {
+					int employeeLocation = 0;
+					for(int j = 0; j < line.length; j++) {
+						if(line[j].equals("Employee")) {
+							employeeLocation = j;
+						}
+					}
+					for(int j = i+1; j < employeeLocation; j++) {
+						if(j + 1 < employeeLocation) {
+							empName += line[j] + " ";
+						}
+						else {
+							empName += line[j];
+						}
+					}
+				}
+				else if(line[i].equals("Number:")) {
+					empNum = Integer.parseInt(line[i + 1]);
+				}
+				else if(line[i].equals("Max")) {
+					empMaxHours = Integer.parseInt(line[i+2]);
+				}
+				else if(line[i].equals("Worked:")) {
+					empHoursWorked = Integer.parseInt(line[i+1]);
+				}
+				else if(line[i].equals("Primary")) {
+					String shiftName = "";
+					int nameLength = 0;
+					for(int j = i; j < line.length; j++) {
+						if(line[j].equals("Possible")) {
+							nameLength = j;
+						}
+					}
+					for(int j = i + 2; j < nameLength; j++) {
+						if(j + 1 == nameLength) {
+							shiftName += line[j];
+						}
+						else {
+							shiftName += line[j] + " ";
+						}
+					}
+					for(int j = 0; j < shifts.length; j++) {
+						if(!(shifts[j] == null)) {
+							if(shiftName.equals(shifts[j].getName())) {
+								empPrimeShift = shifts[j];
+								break;
+							}
+						}
+						else {
+							break;
+						}
+					}
+				}
+				else if(line[i].equals("Shifts:")) {
+					
+					String tempShifts = "";
+					int start = i+1;
+					int end = 0;
+					for(int j = start; j < line.length; j++) {
+						if(line[j].equals("Can")) {
+							end = j;
+						}
+					}
+					for(int j = start; j < end; j++) {
+						
+						if(j+1 == end) {
+							tempShifts += line[j];
+						}
+						else if(isInt(line[j])) {
+							tempShifts += line[j] + " ";
+						}
+						else {
+							tempShifts += line[j];
+						}
+						
+					}
+					
+					String[] line2 = tempShifts.split(",");
+					int possShiftCount = 0;
+					
+					for(int j = 0; j < line2.length; j++) {
+						for(int k = 0; k < shifts.length; k++) {
+							if(!(shifts[k] == null)) {
+								if(line2[j].equals(shifts[k].getName())) {
+									empPossShifts[possShiftCount++] = shifts[k];
+									break;
+								}
+							}
+							else {
+								break;
+							}
+						}
+					}
+				}
+				
+				else if(line[i].equals("Work:")) {
+					
+					String tempDays = "";
+					int start = i+1;
+					int end = 0;
+					for(int j = start; j < line.length; j++) {
+						if(line[j].equals("Works")) {
+							end = j;
+						}
+					}
+					for(int j = start; j < end; j++) {
+						
+							tempDays += line[j];
+							
+					}
+					
+					String[] line2 = tempDays.split(",");
+					int possDayCount = 0;
+					
+					for(int j = 0; j < line2.length; j++) {
+						for(int k = 0; k < shifts.length; k++) {
+							if(!(days[k] == null) && line2.length > 0) {
+								if(line2[j].charAt(0) == days[k].getName()) {
+									empPossDays[possDayCount++] = days[k];
+									break;
+								}
+							}
+							else {
+								break;
+							}
+						}
+					}
+				}
+				else if(line[i].equals("Weekends:")) {
+					worksWeekends = Boolean.parseBoolean(line[i+1]);
+				}
+				else if(line[i].equals("Off:")) {
+					String tempDaysOff = "";
+					if(i+1 >= line.length) {
+						System.out.println("No days requested off");
+					}
+					else {
+						for(int j = i+1; j < line.length; j++) {
+							tempDaysOff += line[j];
+						}
+						String[] line2 = tempDaysOff.split(",");
+						for(int j = 0; j < line2.length; j++) {
+							datesRequestedOff[j] = Integer.parseInt(line2[j]);
+						}
+					}
+				}
+			}
+			
+			Employee e = new Employee(empName, empNum, empMaxHours, empHoursWorked, empPrimeShift, empPossShifts, empPossDays, worksWeekends, datesRequestedOff);
+			employees[employeeCounter++] = e;
+			System.out.println("Loaded: " + e.getName());
+			
+		} //end while loop
+		//close the scanner
+		
+		sc.close();
+		
+	}
 	/*
 	 * Turns an array into a string seperated by spaces
 	 */
@@ -423,6 +624,7 @@ public class Main {
 		}
 		return s;
 	}
+	
 	
 	public static boolean isInt(String s) {
 		
