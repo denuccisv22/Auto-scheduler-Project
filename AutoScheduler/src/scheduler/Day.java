@@ -5,6 +5,7 @@ public class Day {
 	//variables for the Day class
 	private char name;
 	
+	private int date = 0;
 	private int totalNumberOfShifts = 10;
 	private String[] requiredShifts = new String[100];
 	
@@ -46,6 +47,12 @@ public class Day {
 	}
 	public void setRequiredShifts(String[] requiredShifts) {
 		this.requiredShifts = requiredShifts;
+	}
+	public int getDate() {
+		return date;
+	}
+	public void setDate(int date) {
+		this.date = date;
 	}
 	public void printDay() {
 		System.out.println("Day Name: " + this.name + " | Total Number of Shifts: " + this.totalNumberOfShifts + " | Required Shifts: " + arrayToString(this.requiredShifts));

@@ -9,9 +9,10 @@ import java.util.Scanner;
 public class Main {
 
 	//Create an array where shifts can be loaded
-	private static Shift[] shifts = new Shift[100];
-	private static Day[] days = new Day[7];
-	private static Employee[] employees = new Employee[100];
+	public static Shift[] shifts = new Shift[100];
+	public static Day[] days = new Day[7];
+	public static Employee[] employees = new Employee[100];
+	
 	private static int shiftCounter = 0;
 	private static int dayCounter = 0;
 	private static int employeeCounter = 0;
@@ -43,6 +44,7 @@ public class Main {
 		saveShifts();
 		saveEmployees();
 		//createShift();
+		//print the information loaded into the arrays
 		/*for(int i = 0; i < shifts.length; i++) {
 		
 			if(shifts[i] == null) {
@@ -61,7 +63,7 @@ public class Main {
 			else {
 				days[i].printDay();
 			}
-		}*/
+		}
 		
 		for(int i = 0; i < employees.length; i++) {
 			if(employees[i] == null) {
@@ -70,7 +72,7 @@ public class Main {
 			else {
 				employees[i].printEmployeeInfo();
 			}
-		}
+		}*/
 	}
 	
 	//generates the data folder on first launch
@@ -136,7 +138,7 @@ public class Main {
 			}
 		}
 	}
-
+	
 	/*
 	 * Generates shift information, saves it to the shiftInfo.txt file, and adds it to the shifts array
 	 * public Shift(String name, int hours) 
