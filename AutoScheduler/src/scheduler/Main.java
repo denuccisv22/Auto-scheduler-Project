@@ -43,6 +43,11 @@ public class Main {
 		saveDays();
 		saveShifts();
 		saveEmployees();
+		
+		Year test = new Year(2019, 'S');
+		test.generateYear();
+		//test.printYearWeeks();
+		//test.printYearMonths();
 		//createShift();
 		//print the information loaded into the arrays
 		/*for(int i = 0; i < shifts.length; i++) {

@@ -4,53 +4,77 @@ public class Month {
 
 	private String name = "N/A";
 	private int totalDays = 0;
-	private Day[] monthDays = null;
-	private Week[] weeks = new Week[4];
-	
+	private Day[] monthDays = new Day[this.totalDays];
+	private Week[] weeks = new Week[5];
+	private int numWeeks = 0;
+
 	public Month(String name, int totalDays) {
-		
 		setName(name);
 		setTotalDays(totalDays);
-		
-		for(int i = 0; i < weeks.length; i++) {
-			
-			weeks[i] = new Week();
-			
+		for(int i = 0; i < totalDays; i++) {
+			if(i % 7 == 0 && i != 0) {
+				this.numWeeks++;
+			}
 		}
 		
-		setMonthDays(new Day[totalDays]);
+		if(this.totalDays == 30 || this.totalDays == 29 || this.totalDays == 28) {
+			this.numWeeks++;
+		}
 		
+		weeks = new Week[this.numWeeks]; //+ 1];
+		monthDays = new Day[totalDays];
+
+		for (int i = 0; i < weeks.length; i++) {
+
+			weeks[i] = new Week();
+
+		}
+
+		setMonthDays(new Day[totalDays]);
+
 	}
 	
 	public void printMonth() {
+
+		System.out.println();
+		System.out.println(this.name);
+
+		for (int i = 0; i < monthDays.length; i++) {
+
+			if ((i + 1) % 7 == 0) {
+
+				System.out.print(monthDays[i].getDate() + "\n");
+
+			}
+
+			else {
+
+				System.out.print(monthDays[i].getDate() + "\t");
+
+			}
+
+		}
 		
-		System.out.println("s\tM\tT\tW\tR\tF\tS");
+		System.out.println();
+
+	}
+	public void calcNumWeeks() {
 		
-		for(int i = 0; i < weeks.length; i++) {
+		int tempCount = 0;
+		
+		if(this.name == "January" && monthDays[0].getName() != 's') {
+			tempCount++;
+		}
+		
+		for(int i = 0; i < this.totalDays; i++) {
 			
-			Day[] d = weeks[i].getWeeksDays();
-			
-			for(int j = 0; j < d.length; j++) {
-				
-				if(j == 6) {
-					
-					System.out.print(d[j].getDate() + "\n");
-					
-				}
-				
-				else {
-					
-					System.out.print(d[j].getDate() + "\t");
-					
-				}
-				
+			if(monthDays[i].getName() == 's') {
+				tempCount++;
 			}
 			
 		}
 		
-	}
-	
-	public void popMonth() {
+		this.numWeeks = tempCount;
 		
 	}
 
@@ -85,5 +109,13 @@ public class Month {
 	public void setMonthDays(Day[] monthDays) {
 		this.monthDays = monthDays;
 	}
-	
+
+	public int getNumWeeks() {
+		return numWeeks;
+	}
+
+	public void setNumWeeks(int numWeeks) {
+		this.numWeeks = numWeeks;
+	}
+
 }

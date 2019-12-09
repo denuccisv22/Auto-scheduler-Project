@@ -6,7 +6,11 @@ public class Week {
 	
 	public Week() {
 		
-		setWeeksDays(Main.days);
+	}
+	
+	public Week(int weekLength) {
+		
+		this.weeksDays = new Day[weekLength];
 		
 	}
 
