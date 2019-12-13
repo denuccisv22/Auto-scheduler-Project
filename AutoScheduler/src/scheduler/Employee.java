@@ -1,5 +1,7 @@
 package scheduler;
 
+import java.util.LinkedList;
+
 public class Employee {
 
 	//Employee variables
@@ -9,6 +11,7 @@ public class Employee {
 	private int employeeNum = 0;
 	private int maxHours;
 	private int hoursWorked = 0;
+	private LinkedList<Integer> daysWorking = new LinkedList<Integer>();
 	
 	private int[] datesRequestedOff = new int[31];
 	
@@ -146,6 +149,12 @@ public class Employee {
 	}
 	public void setEmployeeNum(int employeeNum) {
 		this.employeeNum = employeeNum;
+	}
+	public LinkedList<Integer> getDaysWorking() {
+		return daysWorking;
+	}
+	public void setDaysWorking(LinkedList<Integer> daysWorking) {
+		this.daysWorking = daysWorking;
 	}
 	public String showPossibleShifts() {
 		String s = "";

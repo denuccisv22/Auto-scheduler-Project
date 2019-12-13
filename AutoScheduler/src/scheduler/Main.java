@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Main {
@@ -12,6 +13,14 @@ public class Main {
 	public static Shift[] shifts = new Shift[100];
 	public static Day[] days = new Day[7];
 	public static Employee[] employees = new Employee[100];
+	
+	/*
+	 * Goes in order of the shifts array
+	 * For example:  shift[0] is 6 coldside
+	 * so the first Linked List is of the
+	 * 6 coldside employees
+	 */
+	public static LinkedList<LinkedList<Employee>> orgShifts = new LinkedList<LinkedList<Employee>>();
 	
 	private static int shiftCounter = 0;
 	private static int dayCounter = 0;
@@ -44,8 +53,23 @@ public class Main {
 		saveShifts();
 		saveEmployees();
 		
-		Year test = new Year(2019, 'S');
-		test.generateYear();
+		Scheduler s1 = new Scheduler();
+		generatePrimeShiftLists();
+		/*
+		System.out.println(orgShifts.size());
+		for(int i = 0; i < orgShifts.size(); i++) {
+			
+			System.out.println("Shift: " + shifts[i].getName());
+			
+			for(int j = 0; j < orgShifts.get(i).size(); j++) {
+				
+				System.out.println("Emp: " + orgShifts.get(i).get(j).getName() + " | Prime Shift = " + orgShifts.get(i).get(j).getPrimaryShift().getName());
+				
+			}
+			
+		}*/
+		s1.daySchedule(days[0]);
+		System.out.println(employees[3].getHoursWorked() + " " + employees[3].getDaysWorking().get(0));
 		//test.printYearWeeks();
 		//test.printYearMonths();
 		//createShift();
@@ -78,6 +102,55 @@ public class Main {
 				employees[i].printEmployeeInfo();
 			}
 		}*/
+	}
+	
+	public static void generatePrimeShiftLists(){
+		int counter = 0;
+		
+		//for all shifts
+		for(int i = 0; i < shifts.length; i++) {
+			
+			if(shifts[i] != null) {
+				
+				//points to the current shift
+				String curShiftName = shifts[i].getName();
+				
+				//creates a linked list of all employees who have primary shift = current shift
+				LinkedList<Employee> e = new LinkedList<Employee>();
+				counter = 0;
+				//for all employees
+				for(int j = 0; j < employees.length; j++) {
+					
+					if(employees[j] != null) {
+						
+						//if the employee has the primary shift = to current shift, add them to the e list
+						if(employees[j].getPrimaryShift() == shifts[i]) {
+							
+							e.add(employees[j]);
+							counter++;
+						}
+						
+					}
+					
+					else {
+						break;
+					}
+				
+					//add the e list to the main list of orgShifts
+					
+				}
+				
+				orgShifts.add(e);
+				
+			}
+			
+			else {
+				break;
+			}
+			
+			
+		}
+		
 	}
 	
 	//generates the data folder on first launch
