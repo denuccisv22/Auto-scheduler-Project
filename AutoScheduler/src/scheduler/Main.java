@@ -55,9 +55,10 @@ public class Main {
 		
 		Scheduler s1 = new Scheduler();
 		generatePrimeShiftLists();
-		/*
-		System.out.println(orgShifts.size());
-		for(int i = 0; i < orgShifts.size(); i++) {
+		Year test = new Year(2019, 'T');
+		test.generateYear();
+		
+		/*for(int i = 0; i < orgShifts.size(); i++) {
 			
 			System.out.println("Shift: " + shifts[i].getName());
 			
@@ -68,8 +69,9 @@ public class Main {
 			}
 			
 		}*/
-		s1.daySchedule(days[0]);
-		System.out.println(employees[3].getHoursWorked() + " " + employees[3].getDaysWorking().get(0));
+		//s1.daySchedule(days[0]);
+		s1.monthSchedule(test.getMonths()[11]);
+		//System.out.println(employees[3].getHoursWorked() + " " + employees[3].getDaysWorking().get(0));
 		//test.printYearWeeks();
 		//test.printYearMonths();
 		//createShift();

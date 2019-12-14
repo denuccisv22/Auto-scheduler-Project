@@ -1,9 +1,9 @@
 Name: 6 Coldside Hours: 6
-Name: 6 Hotside Hours: 8
+Name: 6 Hotside Hours: 6
 Name: 7 Cafe Hours: 7
 Name: 7 Chef Hours: 8
 Name: 6 F.P.A. Hours: 8
-Name: 845 Diet Clerk Hours: 5
+Name: 845 DietClerk Hours: 5
 Name: 9 Dietitian Hours: 8
 Name: 10 F.P.A. Hours: 5
 Name: 11 F.P.A. Hours: 8

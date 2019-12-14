@@ -1,21 +1,21 @@
-Name: Sally Schwarz Employee Number: 2563 Max Hours: 40 Hours Worked: 0 Primary Shift: 6 F.P.A. Possible Shifts: 6 Coldside Can Work: s, S, M, T, W, T, F Works Weekends: true Dates Requested Off: 
+Name: Sally Schwarz Employee Number: 2563 Max Hours: 40 Hours Worked: 0 Primary Shift: 6 F.P.A. Possible Shifts: 6 Coldside Can Work: s, S, M, T, W, R, F Works Weekends: false Dates Requested Off: 
 Name: Ron Hillis Employee Number: 2564 Max Hours: 20 Hours Worked: 0 Primary Shift: 7 Chef Possible Shifts:  Can Work: M, T, W, R, F Works Weekends: false Dates Requested Off: 
-Name: Daniel Arndt Employee Number: 2565 Max Hours: 40 Hours Worked: 0 Primary Shift: 7 Chef Possible Shifts: 6 Coldside, 6 Hotside, 6 F.P.A., 7 Cafe, 10 F.P.A., 11 F.P.A., 12 Charge Can Work: s, S, M, T, W, R, F Works Weekends: true Dates Requested Off: 
-Name: Melanie Jess Employee Number: 2566 Max Hours: 40 Hours Worked: 0 Primary Shift: 6 Hotside Possible Shifts: 6 Coldside, 6 F.P.A., 7 Cafe, 11 F.P.A., 12 Charge Can Work: s, S, M, T, W, R, F Works Weekends: true Dates Requested Off: 
-Name: Nicky Bakken Employee Number: 2567 Max Hours: 30 Hours Worked: 0 Primary Shift: 6 Coldside Possible Shifts: 6 Hotside Can Work: s, S, M, T, W, R, F Works Weekends: true Dates Requested Off: 
+Name: Daniel Arndt Employee Number: 2565 Max Hours: 40 Hours Worked: 0 Primary Shift: 7 Chef Possible Shifts: 6 Coldside, 6 Hotside, 6 F.P.A., 7 Cafe, 10 F.P.A., 11 F.P.A., 12 Charge Can Work: s, S, M, T, W, R, F Works Weekends: false Dates Requested Off: 
+Name: Melanie Jess Employee Number: 2566 Max Hours: 40 Hours Worked: 0 Primary Shift: 6 Hotside Possible Shifts: 6 Coldside, 6 F.P.A., 7 Cafe, 11 F.P.A., 12 Charge Can Work: s, S, M, T, W, R, F Works Weekends: false Dates Requested Off: 
+Name: Nicky Bakken Employee Number: 2567 Max Hours: 30 Hours Worked: 0 Primary Shift: 6 Coldside Possible Shifts: 6 Hotside Can Work: s, S, M, T, W, R, F Works Weekends: false Dates Requested Off: 
 Name: Carol Boettcher Employee Number: 2568 Max Hours: 35 Hours Worked: 0 Primary Shift: 7 Cafe Possible Shifts: 6 Hotside, 12 Charge Can Work: s, S, M, T, W, R, F Works Weekends: true Dates Requested Off: 
-Name: Jill Swangstu Employee Number: 2569 Max Hours: 40 Hours Worked: 0 Primary Shift: 11 F.P.A. Possible Shifts: 6 Coldside, 6 Hotside, 6 F.P.A., 12 Charge Can Work: s, S, M, T, W, R, F Works Weekends: true Dates Requested Off: 
-Name: Lynn Gifford Employee Number: 2570 Max Hours: 40 Hours Worked: 0 Primary Shift: 12 Charge Possible Shifts: 7 Cafe, 11 F.P.A. Can Work: s, S, M, T, W, T, F Works Weekends: true Dates Requested Off: 
-Name: Rosemary Douma Employee Number: 2571 Max Hours: 25 Hours Worked: 0 Primary Shift: 10 F.P.A. Possible Shifts: 6 Coldside Can Work: s, S, M, T, W, T, F Works Weekends: true Dates Requested Off: 
-Name: Andrew Pasnecker Employee Number: 2572 Max Hours: 12 Hours Worked: 6 Primary Shift: 6 Coldside Possible Shifts: 11 F.P.A. Can Work: s, S Works Weekends: true Dates Requested Off: 
-Name: Joyce Thompson Employee Number: 2573 Max Hours: 13 Hours Worked: 0 Primary Shift: 845 Diet Clerk Possible Shifts:  Can Work: M, T, W, R, F Works Weekends: false Dates Requested Off: 
-Name: Lori Peterson Employee Number: 2574 Max Hours: 13 Hours Worked: 0 Primary Shift: 845 Diet Clerk Possible Shifts:  Can Work: M, T, W, R, F Works Weekends: false Dates Requested Off: 
+Name: Jill Swangstu Employee Number: 2569 Max Hours: 40 Hours Worked: 0 Primary Shift: 11 F.P.A. Possible Shifts: 6 Coldside, 6 Hotside, 6 F.P.A., 12 Charge Can Work: s, S, M, T, W, R, F Works Weekends: false Dates Requested Off: 
+Name: Lynn Gifford Employee Number: 2570 Max Hours: 40 Hours Worked: 14 Primary Shift: 12 Charge Possible Shifts: 7 Cafe, 11 F.P.A. Can Work: s, S, M, T, W, R, F Works Weekends: false Dates Requested Off: 
+Name: Rosemary Douma Employee Number: 2571 Max Hours: 25 Hours Worked: 0 Primary Shift: 10 F.P.A. Possible Shifts: 6 Coldside Can Work: s, S, M, T, W, R, F Works Weekends: false Dates Requested Off: 
+Name: Andrew Pasnecker Employee Number: 2572 Max Hours: 12 Hours Worked: 0 Primary Shift: 6 Coldside Possible Shifts: 11 F.P.A. Can Work: s, S Works Weekends: true Dates Requested Off: 
+Name: Joyce Thompson Employee Number: 2573 Max Hours: 13 Hours Worked: 0 Primary Shift: 845 DietClerk Possible Shifts:  Can Work: M, T, W, R, F Works Weekends: false Dates Requested Off: 
+Name: Lori Peterson Employee Number: 2574 Max Hours: 13 Hours Worked: 0 Primary Shift: 845 DietClerk Possible Shifts:  Can Work: M, T, W, R, F Works Weekends: false Dates Requested Off: 
 Name: Autumn Kumlien Employee Number: 2575 Max Hours: 32 Hours Worked: 0 Primary Shift: 9 Dietitian Possible Shifts:  Can Work: M, T, W, R, F Works Weekends: false Dates Requested Off: 
 Name: Wendy Broekema Employee Number: 2576 Max Hours: 10 Hours Worked: 0 Primary Shift: 9 Dietitian Possible Shifts:  Can Work: M, T, W, R, F Works Weekends: false Dates Requested Off: 
-Name: Rose Zickert Employee Number: 2577 Max Hours: 32 Hours Worked: 0 Primary Shift: 6 F.P.A. Possible Shifts: 6 Coldside, 6 Hotside, 7 Cafe, 10 F.P.A. Can Work: s, S, M, T, W, R, F Works Weekends: true Dates Requested Off: 
+Name: Rose Zickert Employee Number: 2577 Max Hours: 32 Hours Worked: 0 Primary Shift: 6 F.P.A. Possible Shifts: 6 Coldside, 6 Hotside, 7 Cafe, 10 F.P.A. Can Work: s, S, M, T, W, R, F Works Weekends: false Dates Requested Off: 
 Name: Sam DeNucci Employee Number: 2578 Max Hours: 14 Hours Worked: 7 Primary Shift: 12 Charge Possible Shifts: 7 Cafe, 11 F.P.A. Can Work: s, S, M, F Works Weekends: true Dates Requested Off: 
-Name: Bob Komes Employee Number: 2579 Max Hours: 8 Hours Worked: 8 Primary Shift: 11 F.P.A. Possible Shifts:  Can Work: s, S, M, T, W, R, F Works Weekends: true Dates Requested Off: 
-Name: Mahmudije Selmani Employee Number: 2580 Max Hours: 12 Hours Worked: 8 Primary Shift: 6 Hotside Possible Shifts: 6 Coldside Can Work: s, S Works Weekends: true Dates Requested Off: 
+Name: Bob Komes Employee Number: 2579 Max Hours: 8 Hours Worked: 0 Primary Shift: 11 F.P.A. Possible Shifts:  Can Work: s, S, M, T, W, R, F Works Weekends: false Dates Requested Off: 
+Name: Mahmudije Selmani Employee Number: 2580 Max Hours: 12 Hours Worked: 0 Primary Shift: 6 Hotside Possible Shifts: 6 Coldside Can Work: s, S Works Weekends: true Dates Requested Off: 
 Name: Sandra Blackburn Employee Number: 2581 Max Hours: 0 Hours Worked: 0 Primary Shift: 6 Coldside Possible Shifts: 6 F.P.A., 7 Cafe, 10 F.P.A., 11 F.P.A. Can Work: s Works Weekends: false Dates Requested Off: 
 Name: Megan Cornell Employee Number: 2582 Max Hours: 0 Hours Worked: 0 Primary Shift: 9 Dietitian Possible Shifts:  Can Work: s Works Weekends: false Dates Requested Off: 
-Name: Cameron Harris Employee Number: 2583 Max Hours: 16 Hours Worked: 8 Primary Shift: 11 F.P.A. Possible Shifts:  Can Work: s, S Works Weekends: true Dates Requested Off: 
+Name: Cameron Harris Employee Number: 2583 Max Hours: 16 Hours Worked: 0 Primary Shift: 11 F.P.A. Possible Shifts:  Can Work: s, S Works Weekends: true Dates Requested Off: 

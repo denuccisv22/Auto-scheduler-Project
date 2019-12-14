@@ -1,7 +1,7 @@
 Name: s Total Shifts: 4 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge
-Name: M Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge
-Name: T Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge
-Name: W Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge
-Name: R Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge
-Name: F Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge
+Name: M Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 6 F.P.A., 7 Cafe, 7 Chef, 845 DietClerk, 9 Dietitian, 10 F.P.A., 11 F.P.A., 12 Charge
+Name: T Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 6 F.P.A., 7 Cafe, 7 Chef, 845 DietClerk, 9 Dietitian, 10 F.P.A., 11 F.P.A., 12 Charge
+Name: W Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 6 F.P.A., 7 Cafe, 7 Chef, 845 DietClerk, 9 Dietitian, 10 F.P.A., 11 F.P.A., 12 Charge
+Name: R Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 6 F.P.A., 7 Cafe, 7 Chef, 845 DietClerk, 10 F.P.A., 11 F.P.A., 12 Charge
+Name: F Total Shifts: 10 Required Shifts: 6 Coldside, 6 Hotside, 6 F.P.A., 7 Cafe, 7 Chef, 845 DietClerk, 9 Dietitian, 11 F.P.A., 12 Charge
 Name: S Total Shifts: 4 Required Shifts: 6 Coldside, 6 Hotside, 11 F.P.A., 12 Charge

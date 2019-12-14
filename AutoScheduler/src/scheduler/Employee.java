@@ -224,4 +224,25 @@ public class Employee {
 						  this.primaryShift.getName() + " | Possible Shifts: " + showPossibleShifts() + " | Works: " + showWorkDays() + " | Works Weekends: " + this.worksWeekends + 
 						  " | Dates Requested Off: " + showDatesRequestedOff());
 	}
+	public void printDaysWorking() {
+		
+		if(this.daysWorking.isEmpty()) {
+			System.out.println("None");
+		}
+		else {
+			for (int i = 0; i < this.daysWorking.size(); i++) {
+				if(i + 1 == this.getDaysWorking().size()) {
+					System.out.println(this.daysWorking.get(i));
+				}
+				else {
+					System.out.print(this.daysWorking.get(i) + ", ");
+				}
+			}
+		}
+	}
+	public void resetHoursWorked() {
+		
+		this.hoursWorked = 0;
+		
+	}
 }

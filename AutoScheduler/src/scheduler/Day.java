@@ -55,7 +55,22 @@ public class Day {
 		this.date = date;
 	}
 	public void printDay() {
-		System.out.println("Day Name: " + this.name + " | Total Number of Shifts: " + this.totalNumberOfShifts + " | Required Shifts: " + arrayToString(this.requiredShifts));
+		System.out.println("Day Name: " + this.name + " | Date: " + this.date +" | Total Number of Shifts: " + this.totalNumberOfShifts + " | Required Shifts: " + arrayToString(this.requiredShifts));
+	}
+	public void addReqShift(String name) {
+		int shiftCounter = 0;
+		
+		for(int i = 0; i < requiredShifts.length; i++) {
+			
+			if(requiredShifts[i] != null) {
+				shiftCounter = i;
+			}
+			else {
+				break;
+			}
+			
+		}
+		this.requiredShifts[shiftCounter + 1] = name;
 	}
 	public static String arrayToString(String[] s) {
 		
