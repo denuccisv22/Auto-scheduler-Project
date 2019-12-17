@@ -77,6 +77,23 @@ public class Month {
 		this.numWeeks = tempCount;
 		
 	}
+	
+	public int calcTotalDays() {
+		int cTotD = 0;
+		for(int i = 0; i < this.weeks.length; i++) {
+			for(int j = 0; j < this.weeks[i].getWeeksDays().length; j++) {
+				
+				if(this.weeks[i].getWeeksDays()[j] != null) {
+					cTotD++;
+				}
+				else {
+					break;
+				}
+				
+			}
+		}
+		return cTotD;
+	}
 
 	public String getName() {
 		return name;

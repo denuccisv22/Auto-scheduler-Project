@@ -54,9 +54,10 @@ public class Main {
 		saveEmployees();
 		
 		Scheduler s1 = new Scheduler();
+		ScheduleGUI gUI = new ScheduleGUI();
 		generatePrimeShiftLists();
-		Year test = new Year(2019, 'T');
-		test.generateYear();
+		//Year test = new Year(2019, 'T');
+		//test.generateYear();
 		
 		/*for(int i = 0; i < orgShifts.size(); i++) {
 			
@@ -70,7 +71,9 @@ public class Main {
 			
 		}*/
 		//s1.daySchedule(days[0]);
-		s1.monthSchedule(test.getMonths()[11]);
+		//s1.monthSchedule(test.getMonths()[11]);
+		gUI.runGUI();
+		//TestFrame.main(args);
 		//System.out.println(employees[3].getHoursWorked() + " " + employees[3].getDaysWorking().get(0));
 		//test.printYearWeeks();
 		//test.printYearMonths();

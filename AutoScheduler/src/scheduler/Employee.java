@@ -245,4 +245,44 @@ public class Employee {
 		this.hoursWorked = 0;
 		
 	}
+	
+	public Object[] getDayToPrintArray(int possibleWorkingDays, int monthStartDate, int monthLength) {
+		
+		Object[] o = new Object[possibleWorkingDays + 1];
+		Object[] tempArray = this.daysWorking.toArray();
+		int daysWorkingCount = 0;
+		int currentDate = monthStartDate;
+		int monthDifference = monthLength - possibleWorkingDays;
+		System.out.println("Month Length = " + monthLength);
+		System.out.println("Possible Working Days = " + possibleWorkingDays);
+		
+		o[0] = this.getName();
+		for(int i = 1; i < o.length; i++) {
+			
+			if(daysWorkingCount < tempArray.length && currentDate == (int)tempArray[daysWorkingCount] && i <= monthLength) {
+				
+				o[i] = this.getPrimaryShift().getName().split(" ")[0];
+				daysWorkingCount++;
+				
+			}
+			else if(daysWorkingCount < tempArray.length && currentDate > monthLength && currentDate % monthLength == (int)tempArray[daysWorkingCount]) {
+				
+				o[i] = this.getPrimaryShift().getName().split(" ")[0];
+				daysWorkingCount++;
+				
+			}
+			
+			currentDate++;
+			
+		}
+		
+		return o;
+		
+	}
+	
+	public void clearDaysWorking() {
+		
+		this.daysWorking = new LinkedList<Integer>();
+		
+	}
 }
